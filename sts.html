@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Bali!</title>
+  <link rel="stylesheet" href="sts.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Tugas Layout Website TIK</h1>
+    </div>
+    <div class="topnav">
+        <a href="index.html">Biodata</a>
+        <a href="table.html">Table</a>
+        <a href="list.html">List</a>
+        <a href="sts.html">STS</a>
+    </div>
+
+  <input type="radio" id="step-captcha" name="site-step" checked>
+  <input type="radio" id="step-video" name="site-step">
+  <input type="radio" id="step-main" name="site-step">
+
+<div id="loading-screen">
+  <div class="loader">
+    <span class="ring"></span>
+    <img src="ASSET/CAPTCHA VERIFICATION/PETAL POPUP.png" class="photo" alt="Loading">
+  </div>
+</div>
+
+<div id="popup-overlay">
+  <div class="captcha-wrapper">
+    <img src="ASSET/CAPTCHA VERIFICATION/BALINESE1.png" alt="Balinese Left" class="balinese balinese-left">
+    <img src="ASSET/CAPTCHA VERIFICATION/BALINESE2.png" alt="Balinese Right" class="balinese balinese-right">
+    <img src="ASSET/CAPTCHA VERIFICATION/SHAPE1.png" alt="Shape Top Left" class="shape shape-top-left">
+    <img src="ASSET/CAPTCHA VERIFICATION/SHAPE2.png" alt="Shape Bottom Right" class="shape shape-bottom-right">
+    <div class="captcha-box">
+      <div class="captcha-header">
+        <div class="header-text">
+          <p class="instruction">Select all images with</p>
+          <h1 class="target-title">BALI (PULAU DEWATA)</h1>
+          <p class="sub-instruction">Click verify once ALL images are selected</p>
+        </div>
+        <div class="header-icons">
+          <span class="eyes-icon">👀</span>
+          <span class="camera-icon">📸</span>
+        </div>
+      </div>
+
+      <input type="checkbox" id="cap1" class="captcha-check-item">
+      <input type="checkbox" id="cap2" class="captcha-check-item">
+      <input type="checkbox" id="cap3" class="captcha-check-item">
+      <input type="checkbox" id="cap4" class="captcha-check-item">
+      <input type="checkbox" id="cap5" class="captcha-check-item">
+      <input type="checkbox" id="cap6" class="captcha-check-item">
+      <input type="checkbox" id="cap7" class="captcha-check-item">
+      <input type="checkbox" id="cap8" class="captcha-check-item">
+      <input type="checkbox" id="cap9" class="captcha-check-item">
+
+      <div class="captcha-grid">
+        <label for="cap1" class="grid-item item-1">
+          <img src="ASSET/CAPTCHA VERIFICATION/1.png" alt="Tile 1">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap2" class="grid-item item-2">
+          <img src="ASSET/CAPTCHA VERIFICATION/2.png" alt="Tile 2">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap3" class="grid-item item-3">
+          <img src="ASSET/CAPTCHA VERIFICATION/3.png" alt="Tile 3">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap4" class="grid-item item-4">
+          <img src="ASSET/CAPTCHA VERIFICATION/4.png" alt="Tile 4">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap5" class="grid-item item-5">
+          <img src="ASSET/CAPTCHA VERIFICATION/5.png" alt="Tile 5">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap6" class="grid-item item-6">
+          <img src="ASSET/CAPTCHA VERIFICATION/6.png" alt="Tile 6">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap7" class="grid-item item-7">
+          <img src="ASSET/CAPTCHA VERIFICATION/7.png" alt="Tile 7">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap8" class="grid-item item-8">
+          <img src="ASSET/CAPTCHA VERIFICATION/8.png" alt="Tile 8">
+          <span class="checkmark">✓</span>
+        </label>
+        <label for="cap9" class="grid-item item-9">
+          <img src="ASSET/CAPTCHA VERIFICATION/9.png" alt="Tile 9">
+          <span class="checkmark">✓</span>
+        </label>
+      </div>
+
+      <div class="captcha-footer">
+        <div class="footer-icons">
+          <button type="button" class="icon-btn" title="Reload">⭮</button>
+          <button type="button" class="icon-btn" title="Audio">♫</button>
+          <button type="button" class="icon-btn" title="Info">🛈</button>
+        </div>
+
+        <label for="step-video" class="btn-verify disabled">VERIFY</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="video-intro-container">
+  <div class="video-wrapper">
+    <video id="introVideo" loop playsinline>
+      <source src="ASSET/INTRO/IMG_8038.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video HTML5.
+    </video>
+
+    <button id="customPlayBtn" class="custom-play-btn" type="button" onclick="playVideo()">PLAY</button>
+
+    <label for="step-main" id="startBtn" class="btn-click-start" onclick="stopVideo()">
+      <img src="ASSET/INTRO/CLICK START.png" alt="Click Start">
+    </label>
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="ASSET/INTRO/BALIBGM.mp3" type="audio/mpeg">
+</audio>
+
+  <div id="water-transition"></div>
+  <main class="main-content" id="mainContent">
+    <div class="bali-header-final">
+
+      <header class="header-container">
+        <img src="ASSET/HEADER/HEADER BG.png" alt="Header Background Bali" class="header-bg-img">
+
+        <div class="header-title-overlay">
+        <img src="ASSET/HEADER/HEADER TITLE.png" alt="Header Title Bali" class="header-title-img">
+        </div>
+
+        <div class="header-slogan-overlay">
+          <p class="header-slogan-text"> Menemukan Keajaiban dan Keindahan di Setiap Sudut Pulau Dewata! </p>
+        </div>
+      </header>
+
+
+      <nav class="navbar-container">
+        <div class="flower-wrapper">
+          <img src="ASSET/HEADER/FLOWER 1.png" alt="Bunga Bali" class="flower-spin-img">
+        </div>
+
+
+        <div class="nav-center-menu">
+          <a href="index.html" class="nav-btn active">
+            <span class="btn-text">Home Page</span>
+          </a>
+          <a href="explore.html" class="nav-btn">
+            <span class="btn-text">Explore Destinations</span>
+          </a>
+          </a>
+          <a href="games.html" class="nav-btn">
+            <span class="btn-text">Fun Game Page!</span>
+          </a>
+        </div>
+
+        <div class="flower-wrapper">
+          <img src="ASSET/HEADER/FLOWER 2.png" alt="Bunga Bali" class="flower-spin-img">
+        </div>
+      </nav>
+    </div>
+
+<section class="opening-container">
+  <div class="opening-shape">
+    <div class="sparkles">
+      <span class="star s1">✦</span>
+      <span class="star s2">★</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">★</span>
+    </div>
+
+    <div class="shape-content">
+      <h2 class="opening-title">🌊🪸 Selamat Datang di Bali! 🏝️🛕</h2>
+      <p class="opening-text">
+        Pulau yang menghadirkan perpaduan keindahan alam, kekayaan budaya, kuliner, dan berbagai pengalaman wisata. Mulai dari pantai yang indah, pegunungan yang sejuk, hingga tempat-tempat yang masih kental dengan tradisi Bali, setiap daerah memiliki ciri khas dan daya tariknya sendiri. Jelajahi berbagai sisi Bali, temukan destinasi yang sesuai dengan minatmu, dan rasakan pengalaman berbeda di setiap bagian Bali!
+      </p>
+    </div>
+  </div>
+
+  <div class="gapura-wrapper">
+    <div class="gapura gapura-left">
+      <img src="ASSET/HOME/GAPURALEFT.png" alt="Gapura Left">
+    </div>
+    <div class="gapura gapura-right">
+      <img src="ASSET/HOME/GAPURARIGHT.png" alt="Gapura Right">
+    </div>
+  </div>
+</section>
+
+        <div class="cloud-layer" aria-hidden="true">
+            <span class="cloud cloud-one"></span>
+            <span class="cloud cloud-two"></span>
+            <span class="cloud cloud-three"></span>
+            <span class="cloud cloud-four"></span>
+            <span class="cloud cloud-five"></span>
+        </div>
+
+  <div class="page-wrapper">
+    <section class="intro-card">
+        <div class="intro-text">
+            <p>Bali adalah pulau yang dikenal dengan keindahan alam, budaya, dan tradisinya yang kuat. Dari sawah hijau dan pegunungan hingga pantai-pantai di sepanjang pesisir, setiap daerah memiliki suasana dan daya tariknya sendiri. Seni dan tradisi juga menjadi bagian penting dalam kehidupan masyarakat Bali, terlihat dari upacara, tari, kerajinan, dan arsitekturnya. Ditambah dengan beragam kuliner dan aktivitas wisata, Bali selalu memiliki sesuatu untuk dinikmati dan dijelajahi.</p>
+        </div>
+
+        <article class="profile-card">
+            <div class="photo-placeholder" role="region" aria-label="Slider foto profil">
+                <div class="photo-track">
+
+                    <figure class="photo-slide" id="profile-slide-1">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 1.jpeg" alt="Foto profil slide pertama">
+                        <a class="slide-button slide-prev" href="#profile-slide-7" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-2" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-2">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 2.jpeg" alt="Foto profil slide kedua">
+                        <a class="slide-button slide-prev" href="#profile-slide-1" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-3" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-3">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 3.jpeg" alt="Foto profil slide ketiga">
+                        <a class="slide-button slide-prev" href="#profile-slide-2" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-4" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-4">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 4.jpeg" alt="Foto profil slide keempat">
+                        <a class="slide-button slide-prev" href="#profile-slide-3" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-5" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-5">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 5.jpeg" alt="Foto profil slide kelima">
+                        <a class="slide-button slide-prev" href="#profile-slide-4" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-6" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-6">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 6.jpeg" alt="Foto profil slide keenam">
+                        <a class="slide-button slide-prev" href="#profile-slide-5" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-7" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                    <figure class="photo-slide" id="profile-slide-7">
+                        <img class="profile-photo" src="ASSET/HOME/FOTO SLIDES/FOTO 7.jpg" alt="Foto profil slide ketujuh">
+                        <a class="slide-button slide-prev" href="#profile-slide-6" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                        <a class="slide-button slide-next" href="#profile-slide-1" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                    </figure>
+
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="page-break-wrapper">
+        <img src="ASSET/HOME/Beach Page Divider.png" alt="Pembatas Halaman" class="animated-divider">
+    </div>
+
+        <section class="title-section" aria-labelledby="title-title">
+            <div class="wood-sign">
+                <span class="rope rope-left" aria-hidden="true"></span>
+                <span class="rope rope-right" aria-hidden="true"></span>
+                <h2 class="wood-title" id="title-title">Wilayah Geografis</h2>
+            </div>
+
+            <img
+                class="flower-decoration flower-right"
+                src="ASSET/HOME/BUNGA KANAN.png"
+                alt="Flowers right"
+                aria-hidden="true"
+            >
+
+            <img
+                class="flower-decoration flower-left"
+                src="ASSET/HOME/BUNGA KIRI.png"
+                alt="Flowers left"
+                aria-hidden="true"
+            >
+            </section>
+
+<section class="map-section">
+  <div class="map-placeholder" id="peta-wrapper">
+    <div class="map-sparkles">
+      <span class="star s1">✦</span>
+      <span class="star s2">★</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">★</span>
+    </div>
+
+    <img class="map-image" src="ASSET/HOME/MAP.png" alt="Peta Pulau Bali">
+    <h2 class="map-title">Peta Bali</h2>
+
+    <a href="#popup-utara" class="map-point" style="top: 17%; left: 50%;" aria-label="Lihat info Bali Utara"></a>
+    <div class="map-popup" id="popup-utara">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Bali Utara</p>
+      <span>Lovina, Singaraja, Munduk, Gitgit, Banjar</span>
+    </div>
+
+    <a href="#popup-tengah" class="map-point" style="top: 28%; left: 60%;" aria-label="Lihat info Bali Tengah"></a>
+    <div class="map-popup" id="popup-tengah">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Bali Tengah</p>
+      <span>Ubud, Bedugul, Kintamani, Tegallalang, Payangan</span>
+    </div>
+
+    <a href="#popup-barat" class="map-point" style="top: 33%; left: 21%;" aria-label="Lihat info Bali Barat"></a>
+    <div class="map-popup" id="popup-barat">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Bali Barat</p>
+      <span>Pemuteran, Pulau Menjangan, Gilimanuk, Negara, Pekutatan</span>
+    </div>
+
+    <a href="#popup-timur" class="map-point" style="top: 38%; left: 89%;" aria-label="Lihat info Bali Timur"></a>
+    <div class="map-popup" id="popup-timur">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Bali Timur</p>
+      <span>Amed, Tulamben, Candi Dasa, Padangbai, Besakih, Klungkung, Karangasem</span>
+    </div>
+
+    <a href="#popup-selatan" class="map-point" style="top: 80%; left: 55%;" aria-label="Lihat info Bali Selatan"></a>
+    <div class="map-popup" id="popup-selatan">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Bali Selatan</p>
+      <span>Kuta, Legian, Seminyak, Canggu, Jimbaran, Nusa Dua, Uluwatu, Sanur, Denpasar</span>
+    </div>
+
+    <a href="#popup-pulau" class="map-point" style="top: 73%; left: 89%;" aria-label="Lihat info Kepulauan Lepas Pantai"></a>
+    <div class="map-popup" id="popup-pulau">
+      <a href="#peta-wrapper" class="popup-close" aria-label="Tutup">&times;</a>
+      <p>Kepulauan Lepas Pantai</p>
+      <span>Nusa Penida, Nusa Lembongan, Nusa Ceningan</span>
+    </div>
+
+    <a href="#peta-wrapper" class="map-overlay" aria-hidden="true" tabindex="-1"></a>
+  </div>
+
+  <div class="mapbox-card">
+    <div class="mapbox-inner">
+      <div class="mapbox-front">
+        <img src="ASSET/HOME/mapboxmain.png" alt="Mapbox Front">
+      </div>
+      <div class="mapbox-back">
+        <img src="ASSET/HOME/mapbox.png" alt="Mapbox Back">
+        <div class="map-text">
+          <h3>Penjelasan Wilayah Geografis: </h3>
+          <ol>
+            <li><strong>Bali Selatan</strong> = Kuta, Legian, Seminyak, Canggu, Kerobokan, Jimbaran, Nusa Dua, Tanjung Benoa, Uluwatu, Pecatu, Ungasan, Sanur, Denpasar.</li>
+            <li><strong>Bali Tengah</strong> = Ubud, Bedugul, Kintamani, Tegallalang, Payangan.</li>
+            <li><strong>Bali Timur</strong> = Amed, Tulamben, Candi Dasa, Padangbai, Besakih, Klungkung, Karangasem.</li>
+            <li><strong>Bali Utara</strong> = Lovina, Singaraja, Munduk, Gitgit, Banjar.</li>
+            <li><strong>Bali Barat</strong> = Pemuteran, Pulau Menjangan, Gilimanuk, Negara, Pekutatan.</li>
+            <li><strong>Kepulauan Lepas Pantai</strong> = Nusa Penida, Nusa Lembongan, Nusa Ceningan.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="title-section" aria-labelledby="title-title">
+            <div class="wood-sign">
+                <span class="rope rope-left" aria-hidden="true"></span>
+                <span class="rope rope-right" aria-hidden="true"></span>
+                <h2 class="wood-title" id="title-title">All About Bali!</h2>
+            </div>
+
+            <img
+                class="flower-decoration flower-right"
+                src="ASSET/HOME/BUNGA KANAN.png"
+                alt="Flowers right"
+                aria-hidden="true"
+            >
+
+            <img
+                class="flower-decoration flower-left"
+                src="ASSET/HOME/BUNGA KIRI.png"
+                alt="Flowers left"
+                aria-hidden="true"
+            >
+            </section>
+
+<div class="paragraphs-container">
+  <div class="paragraph-shape">
+    <div class="shape-sparkles">
+      <span class="star s1">✦</span>
+      <span class="star s2">★</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">★</span>
+    </div>
+    <p class="paragraph-text">
+    Setiap wilayah di Bali memiliki suasana dan karakter yang berbeda. Daerah seperti Kuta dan Nusa Dua menawarkan pemandangan pantai serta berbagai aktivitas wisata, sedangkan Ubud dikenal dengan suasana yang lebih tenang, hamparan sawah, seni, dan kehidupan tradisionalnya. Di Kintamani, wisatawan dapat menikmati pemandangan Gunung Batur dan Danau Batur yang menjadi salah satu daya tarik alam Bali. Sementara itu, Nusa Penida memiliki banyak pemandangan pesisir dengan tebing, laut, dan pantai yang menjadi tujuan wisata. Keberagaman alam tersebut membuat Bali memiliki banyak pilihan tempat untuk dikunjungi, baik untuk menikmati pemandangan, beristirahat, maupun mencoba berbagai kegiatan selama perjalanan.
+    </p>
+  </div>
+
+  <div class="paragraph-shape">
+    <div class="shape-sparkles">
+      <span class="star s1">✦</span>
+      <span class="star s2">★</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">★</span>
+    </div>
+    <p class="paragraph-text">
+    Selain alamnya, Bali juga memiliki budaya dan tradisi yang masih sangat dekat dengan kehidupan masyarakat. Pura dapat ditemukan di berbagai daerah dengan arsitektur dan lingkungan yang memiliki ciri khas Bali. Berbagai upacara adat, tari tradisional, musik gamelan, seni ukir, lukisan, hingga kerajinan menjadi bagian dari kehidupan masyarakat dan dapat ditemui dalam berbagai kegiatan budaya. Kehidupan masyarakat Bali juga memiliki hubungan yang erat dengan lingkungan dan kehidupan bersama. Hal ini dapat terlihat melalui keberadaan banjar sebagai bagian dari kehidupan sosial masyarakat serta sistem subak yang digunakan dalam pengelolaan irigasi pertanian. Tradisi dan kebiasaan tersebut membuat budaya Bali tidak hanya terlihat dalam pertunjukan wisata, tetapi juga menjadi bagian dari kehidupan sehari-hari. Wisatawan dapat mengenal budaya Bali melalui kunjungan ke pura, desa adat, museum, pasar tradisional, pusat kerajinan, maupun pertunjukan seni. Setiap tempat memberikan kesempatan untuk melihat sisi Bali yang berbeda dan memahami bagaimana budaya tetap menjadi bagian penting dalam kehidupan masyarakatnya.
+    </p>
+  </div>
+
+  <div class="paragraph-shape">
+    <div class="shape-sparkles">
+      <span class="star s1">✦</span>
+      <span class="star s2">★</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">★</span>
+    </div>
+    <p class="paragraph-text">
+    Bali juga memiliki banyak pilihan wisata yang dapat disesuaikan dengan minat setiap pengunjung. Bagi yang menyukai pantai dan aktivitas air, berbagai tempat menawarkan kegiatan seperti berenang, berselancar, snorkeling, dan menikmati pemandangan laut. Bagi yang lebih tertarik dengan alam, daerah pegunungan dan pedesaan dapat menjadi pilihan untuk menikmati udara yang lebih sejuk, melihat persawahan, atau menjelajahi pemandangan alam. Sementara itu, wisata budaya dapat dilakukan dengan mengunjungi pura, mengikuti pertunjukan tari, melihat proses pembuatan kerajinan, atau mengenal kehidupan masyarakat setempat. Bali juga memiliki beragam pilihan kuliner, mulai dari makanan khas seperti nasi campur Bali, ayam betutu, sate lilit, dan lawar hingga berbagai restoran, kafe, dan tempat makan dengan konsep yang lebih modern. Di kawasan wisata seperti Canggu dan Kuta, pengunjung juga dapat menemukan banyak tempat untuk bersantai, berbelanja, dan menikmati suasana yang lebih ramai. Dengan begitu banyak pilihan, perjalanan ke Bali dapat disusun sesuai dengan kebutuhan dan ketertarikan masing-masing. Setiap daerah memiliki pengalaman yang berbeda, sehingga menjelajahi Bali dapat menjadi kesempatan untuk menikmati alam, mengenal budaya, mencoba kuliner, dan menemukan berbagai tempat menarik dalam satu perjalanan.
+    </p>
+  </div>
+</div>
+
+  <script>
+    function playVideo() {
+      var video = document.getElementById("introVideo");
+      var playBtn = document.getElementById("customPlayBtn");
+      video.play();
+      playBtn.style.display = "none";
+    }
+
+    function stopVideo() {
+      var video = document.getElementById("introVideo");
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const clickStartBtn = document.querySelector('img[src*="ASSET/INTRO/CLICK START.png"]');
+    const bgMusic = document.getElementById('bgMusic');
+
+    if (clickStartBtn) {
+      clickStartBtn.addEventListener('click', () => {
+        bgMusic.play().then(() => {
+          console.log("Audio berhasil diputar!");
+        }).catch((error) => {
+          console.log("Autoplay terhalang browser atau file tidak ditemukan: ", error);
+        });
+      });
+    }
+  });
+  </script>
+
+        <center>
+            <div class="footer">
+                <p>✨ 🌟 Clarissa Alana Rajasa Ginting IX-1/10 - Tugas TIK - 26 Oktober 2026🌟 ✨</p>
+            </div>
+        </center>
+    </div>
+    
+</body>
+</html>

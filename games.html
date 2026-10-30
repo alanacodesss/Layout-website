@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Time!</title>
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+<input type="radio" name="site-step" id="step-main" checked>
+
+<div id="loading-screen">
+  <div class="loader">
+    <span class="ring"></span>
+    <img src="ASSET/CAPTCHA VERIFICATION/PETAL POPUP.png" class="photo" alt="Loading">
+  </div>
+</div>
+
+  <div id="water-transition"></div>
+  <main class="main-content" id="mainContent">
+    <div class="bali-header-final">
+
+      <header class="header-container">
+        <img src="ASSET/HEADER/HEADER BG.png" alt="Header Background Bali" class="header-bg-img">
+
+        <div class="header-title-overlay">
+        <img src="ASSET/HEADER/HEADER TITLE.png" alt="Header Title Bali" class="header-title-img">
+        </div>
+
+        <div class="header-slogan-overlay">
+          <p class="header-slogan-text"> Menemukan Keajaiban dan Keindahan di Setiap Sudut Pulau Dewata! </p>
+        </div>
+      </header>
+
+      <nav class="navbar-container">
+        <div class="flower-wrapper">
+          <img src="ASSET/HEADER/FLOWER 1.png" alt="Bunga Bali" class="flower-spin-img">
+        </div>
+
+        <div class="nav-center-menu">
+          <a href="sts.html" class="nav-btn active">
+            <span class="btn-text">Home</span>
+          </a>
+          <a href="explore.html" class="nav-btn">
+            <span class="btn-text">Explore Destinations</span>
+          </a>
+          </a>
+          <a href="games.html" class="nav-btn">
+            <span class="btn-text">Fun Game Page!</span>
+          </a>
+        </div>
+
+        <div class="flower-wrapper">
+          <img src="ASSET/HEADER/FLOWER 2.png" alt="Bunga Bali" class="flower-spin-img">
+        </div>
+      </nav>
+    </div>
+
+        <div class="cloud-layer" aria-hidden="true">
+            <span class="cloud cloud-one"></span>
+            <span class="cloud cloud-two"></span>
+            <span class="cloud cloud-three"></span>
+            <span class="cloud cloud-four"></span>
+            <span class="cloud cloud-five"></span>
+        </div>
+
+    <div class="page-wrapper">
+    <section class="match-game">
+
+        <input type="radio" name="bali-match" id="match-none" class="match-radio" checked>
+        <input type="radio" name="bali-match" id="match-nature" class="match-radio">
+        <input type="radio" name="bali-match" id="match-adventure" class="match-radio">
+        <input type="radio" name="bali-match" id="match-culture" class="match-radio">
+        <input type="radio" name="bali-match" id="match-food" class="match-radio">
+        <input type="radio" name="bali-match" id="match-relax" class="match-radio">
+
+        <div class="match-card">
+
+            <p class="match-eyebrow">Bali Match Finder</p>
+            <h2 class="match-title">What Are You Looking For?</h2>
+            <p class="match-subtitle">Pilih mood liburanmu, dan temukan destinasi Bali yang paling cocok!</p>
+
+            <div class="match-buttons">
+                <label for="match-nature" class="match-btn">
+                    <span class="match-btn-emoji">🌿</span> NATURE
+                </label>
+                <label for="match-adventure" class="match-btn">
+                    <span class="match-btn-emoji">🏄</span> ADVENTURE
+                </label>
+                <label for="match-culture" class="match-btn">
+                    <span class="match-btn-emoji">🎨</span> CULTURE
+                </label>
+                <label for="match-food" class="match-btn">
+                    <span class="match-btn-emoji">🍽️</span> FOOD
+                </label>
+                <label for="match-relax" class="match-btn">
+                    <span class="match-btn-emoji">🌴</span> RELAXATION
+                </label>
+            </div>
+
+            <div class="match-result placeholder-result">
+                <span class="match-placeholder-icon">🧭</span>
+                <p>Klik salah satu mood di atas untuk melihat kecocokan Balimu!</p>
+            </div>
+
+            <div class="match-result" id="result-nature">
+                <p class="result-eyebrow">Your Bali Match</p>
+                <h3 class="result-name">Munduk &amp; Bedugul</h3>
+                <p class="result-desc">Trek through misty highlands, cascading waterfalls, and endless emerald rice terraces.</p>
+                <div class="result-info">
+                    <div class="info-chip"><span>💰</span> Rp 250rb-600rb / hari</div>
+                    <div class="info-chip"><span>🗓️</span> Ideal 2-3 hari</div>
+                    <div class="info-chip"><span>🏷️</span> Alam &amp; hiking</div>
+                </div>
+                <ul class="result-activities">
+                    <li>Trekking Air Terjun Munduk</li>
+                    <li>Susur Danau Beratan &amp; Ulun Danu</li>
+                    <li>Jalan-jalan di sawah Jatiluwih</li>
+                </ul>
+            </div>
+
+            <div class="match-result" id="result-adventure">
+                <p class="result-eyebrow">Your Bali Match</p>
+                <h3 class="result-name">Nusa Penida</h3>
+                <p class="result-desc">Explore dramatic landscapes, beaches, and underwater adventures.</p>
+                <div class="result-info">
+                    <div class="info-chip"><span>💰</span> Rp 400rb-900rb / hari</div>
+                    <div class="info-chip"><span>🗓️</span> Ideal 1-2 hari</div>
+                    <div class="info-chip"><span>🏷️</span> Snorkeling &amp; cliff view</div>
+                </div>
+                <ul class="result-activities">
+                    <li>Kelingking Beach &amp; Broken Beach</li>
+                    <li>Snorkeling di Manta Point</li>
+                    <li>Angel's Billabong</li>
+                </ul>
+            </div>
+
+            <div class="match-result" id="result-culture">
+                <p class="result-eyebrow">Your Bali Match</p>
+                <h3 class="result-name">Ubud</h3>
+                <p class="result-desc">Perfect for culture, nature, art, and culinary experiences.</p>
+                <div class="result-info">
+                    <div class="info-chip"><span>💰</span> Rp 300rb-700rb / hari</div>
+                    <div class="info-chip"><span>🗓️</span> Ideal 3-4 hari</div>
+                    <div class="info-chip"><span>🏷️</span> Seni &amp; tradisi</div>
+                </div>
+                <ul class="result-activities">
+                    <li>Ubud Palace &amp; Pasar Seni</li>
+                    <li>Tegallalang Rice Terrace</li>
+                    <li>Galeri seni &amp; workshop kerajinan</li>
+                </ul>
+            </div>
+
+            <div class="match-result" id="result-food">
+                <p class="result-eyebrow">Your Bali Match</p>
+                <h3 class="result-name">Seminyak &amp; Canggu</h3>
+                <p class="result-desc">Indulge in Bali's best cafes, beach clubs, and fine dining scenes.</p>
+                <div class="result-info">
+                    <div class="info-chip"><span>💰</span> Rp 350rb-800rb / hari</div>
+                    <div class="info-chip"><span>🗓️</span> Ideal 2-3 hari</div>
+                    <div class="info-chip"><span>🏷️</span> Kuliner &amp; nightlife</div>
+                </div>
+                <ul class="result-activities">
+                    <li>Wisata kafe &amp; brunch estetik</li>
+                    <li>Sunset di beach club</li>
+                    <li>Warung lokal ikonik</li>
+                </ul>
+            </div>
+
+            <div class="match-result" id="result-relax">
+                <p class="result-eyebrow">Your Bali Match</p>
+                <h3 class="result-name">Nusa Dua</h3>
+                <p class="result-desc">Unwind on calm beaches with luxury resorts and quiet, relaxing spas.</p>
+                <div class="result-info">
+                    <div class="info-chip"><span>💰</span> Rp 500rb-1,2jt / hari</div>
+                    <div class="info-chip"><span>🗓️</span> Ideal 3-5 hari</div>
+                    <div class="info-chip"><span>🏷️</span> Santai &amp; honeymoon</div>
+                </div>
+                <ul class="result-activities">
+                    <li>Spa &amp; wellness retreat</li>
+                    <li>Pantai tenang &amp; snorkeling ringan</li>
+                    <li>Water Blow Nusa Dua</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+   <section class="funfacts-game">
+  <div class="funfacts-sparkles">
+    <span class="star s1">✦</span>
+    <span class="star s2">★</span>
+    <span class="star s3">✦</span>
+    <span class="star s4">★</span>
+  </div>
+
+  <p class="match-eyebrow" style="text-align:center;">Did You Know?</p>
+  <h2 class="match-title" style="text-align:center;">Fun Facts About Bali</h2>
+  <p class="match-subtitle" style="text-align:center;">Arahkan kursor ke tiap emoji untuk membuka faktanya!</p>
+
+  <div class="funfacts-row">
+    <div class="fact-item">
+      <span class="fact-emoji">🌋</span>
+      <span class="fact-label">Gunung Berapi</span>
+      <div class="fact-bubble">
+        Bali mempunyai beberapa gunung berapi aktif, termasuk Gunung Agung yang dianggap paling suci oleh masyarakat Hindu Bali.
+      </div>
+    </div>
+
+    <div class="fact-item">
+      <span class="fact-emoji">🐒</span>
+      <span class="fact-label">Monyet Liar</span>
+      <div class="fact-bubble">
+        Ada puluhan kelompok monyet liar di Bali loh! Salah satu yang paling terkenal tinggal di Monkey Forest, Ubud.
+      </div>
+    </div>
+
+    <div class="fact-item">
+      <span class="fact-emoji">🛕</span>
+      <span class="fact-label">Seribu Pura</span>
+      <div class="fact-bubble">
+        Bali dijuluki "Pulau Seribu Pura" karena memiliki lebih dari 20.000 pura yang tersebar di seluruh pulau.
+      </div>
+    </div>
+
+    <div class="fact-item">
+      <span class="fact-emoji">🌾</span>
+      <span class="fact-label">Sistem Subak</span>
+      <div class="fact-bubble">
+        Sistem irigasi tradisional Bali, Subak, telah diakui UNESCO sebagai Warisan Budaya Dunia sejak tahun 2012.
+      </div>
+    </div>
+
+    <div class="fact-item">
+      <span class="fact-emoji">🐢</span>
+      <span class="fact-label">Penyu Langka</span>
+      <div class="fact-bubble">
+        Beberapa pantai di Bali menjadi lokasi peneluran penyu langka yang dilindungi setiap tahunnya.
+      </div>
+    </div>
+  </div>
+</section>
+
+<audio id="bgMusic" loop>
+  <source src="ASSET/INTRO/BALIBGM.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const clickStartBtn = document.querySelector('img[src*="ASSET/INTRO/CLICK START.png"]');
+    const bgMusic = document.getElementById('bgMusic');
+
+    if (clickStartBtn) {
+      clickStartBtn.addEventListener('click', () => {
+        bgMusic.play().then(() => {
+          console.log("Audio berhasil diputar!");
+        }).catch((error) => {
+          console.log("Autoplay terhalang browser atau file tidak ditemukan: ", error);
+        });
+      });
+    }
+  });
+  </script>
+</div>
+</body>
+</html>

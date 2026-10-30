@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout Website</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+    <div class="header">
+        <h1>Tugas Layout Website TIK</h1>
+    </div>
+    <div class="topnav">
+        <a href="index.html">Biodata</a>
+        <a href="table.html">Table</a>
+        <a href="list.html">List</a>
+        <a href="sts.html">STS</a>
+    </div>
+
+           <div class="row">
+<div id="loading-screen">
+  <div class="loader">
+    <span class="ring"></span>
+    <img src="ASSET/foto kecil loading.jpg" class="photo">
+  </div>
+</div>
+<div id="custom-cursor-container">
+  <div class="cc-cursor"></div>
+</div>
+
+<script>
+(function() {
+  const cursor = document.querySelector(".cc-cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + "px";
+  });
+
+  document.addEventListener("mousedown", (e) => {
+    const ripple = document.createElement("div");
+    ripple.className = "cc-ripple";
+
+    ripple.style.top = e.clientY + "px";
+    ripple.style.left = e.clientX + "px";
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 800);
+  });
+
+})();
+</script>
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loading-screen");
+
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 900);
+});
+</script>
+
+</head>
+<body>
+ 
+<div id="popup-overlay">
+  <div id="popup-box">
+    <button id="popup-Continue">So cute!</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popup-overlay");
+  const closeBtn = document.getElementById("popup-Continue");
+
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 400);
+
+  const autoClose = setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5400);
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+    clearTimeout(autoClose);
+  });
+});
+</script>
+
+    <main class="website-card">
+        <div class="top-decoration" aria-hidden="true"></div>
+        <header class="welcome-banner">
+        <img class="welcome-image" src="ASSET/Selamat datang header.png" alt="Selamat datang di website pertama saya">
+        </header>
+        <div class="cloud-layer" aria-hidden="true">
+            <span class="cloud cloud-one"></span>
+            <span class="cloud cloud-two"></span>
+            <span class="cloud cloud-three"></span>
+            <span class="cloud cloud-four"></span>
+            <span class="cloud cloud-five"></span>
+        </div>
+        <section class="biodata-section" aria-labelledby="biodata-title">
+            <div class="wood-sign">
+                <span class="rope rope-left" aria-hidden="true"></span>
+                <span class="rope rope-right" aria-hidden="true"></span>
+                <h2 class="wood-title" id="biodata-title">☘️ Biodata Diri 🌿</h2>
+            </div>
+
+            <img
+                class="flower-decoration flower-right"
+                src="ASSET/BUNGA KANAN.png"
+                alt="Flowers right"
+                aria-hidden="true"
+            >
+
+            <img
+                class="flower-decoration flower-left"
+                src="ASSET/BUNGA KIRI.png"
+                alt="Flowers left"
+                aria-hidden="true"
+            >
+            
+            <article class="profile-card">
+            <div class="photo-placeholder" role="region" aria-label="Slider foto profil">
+
+                    <div class="photo-track">
+                        <figure class="photo-slide" id="profile-slide-1">
+                            <img class="profile-photo photo-left" src="ASSET/FOTO SLIDES/FOTO 1.png" alt="Foto profil slide pertama">
+                            <a class="slide-button slide-prev" href="#profile-slide-3" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-2" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                        <figure class="photo-slide" id="profile-slide-2">
+                            <img class="profile-photo photo-center" src="ASSET/FOTO SLIDES/FOTO 2.jpg" alt="Foto profil slide kedua">
+                            <a class="slide-button slide-prev" href="#profile-slide-1" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-3" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                        <figure class="photo-slide" id="profile-slide-3">
+                            <img class="profile-photo photo-right" src="ASSET/FOTO SLIDES/FOTO 3.jpeg" alt="Foto profil slide ketiga">
+                            <a class="slide-button slide-prev" href="#profile-slide-2" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-4" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                        <figure class="photo-slide" id="profile-slide-4">
+                            <img class="profile-photo photo-right" src="ASSET/FOTO SLIDES/FOTO 4.png" alt="Foto profil slide keempat">
+                            <a class="slide-button slide-prev" href="#profile-slide-3" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-5" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+                        
+                        <figure class="photo-slide" id="profile-slide-5">
+                            <img class="profile-photo photo-right" src="ASSET/FOTO SLIDES/FOTO 5.jpeg" alt="Foto profil slide kelima">
+                            <a class="slide-button slide-prev" href="#profile-slide-4" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-6" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                        <figure class="photo-slide" id="profile-slide-6">
+                            <img class="profile-photo photo-right" src="ASSET/FOTO SLIDES/FOTO 6.png" alt="Foto profil slide keenam">
+                            <a class="slide-button slide-prev" href="#profile-slide-5" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-7" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                        <figure class="photo-slide" id="profile-slide-7">
+                            <img class="profile-photo photo-right" src="ASSET/FOTO SLIDES/FOTO 7.png" alt="Foto profil slide ketujuh">
+                            <a class="slide-button slide-prev" href="#profile-slide-6" aria-label="Tampilkan foto sebelumnya">&#10094;</a>
+                            <a class="slide-button slide-next" href="#profile-slide-1" aria-label="Tampilkan foto berikutnya">&#10095;</a>
+                        </figure>
+
+                    </div>
+                </div>
+
+                    <div class="profile-info">
+                    <dl class="profile-list">
+                        
+                        <dt>Nama Lengkap</dt>
+                        <dd>Clarissa Alana Rajasa Ginting</dd>
+
+                        
+                        <dt>Tanggal Lahir</dt>
+                        <dd>22 Oktober 2011</dd>
+
+                        
+                        <dt>Tempat Lahir</dt>
+                        <dd>Jakarta Selatan</dd>
+
+                        
+                        <dt>Email</dt>
+                        <dd>clarissa_10156@smp.santaursulajakarta.sch.id</dd>
+
+                        
+                        <dt>Hobi</dt>
+                        <dd>Bermain piano, bernyanyi, bermain gitar</dd>
+
+                        <dt>Motto</dt>
+                        <dd>The strongest people aren't those who never fail, but those who never stop becoming better!</dd>
+
+                        
+                        <dt>Pesan</dt>
+                        <dd>Take time to rest, so you can return as a stronger person and go further.</dd>
+
+                    </dl>
+                </div>
+
+                <div class="bottom-flowers" aria-hidden="true">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 1.png" alt="">
+                    <img class="bottom-flower-image" src="ASSET/FLOWERS/flower 2.png" alt="">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 3.png" alt="">
+                    <img class="bottom-flower-image" src="ASSET/FLOWERS/flower 4.png" alt="">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 5.png" alt="">
+                    <img class="bottom-flower-image" src="ASSET/FLOWERS/flower 6.png" alt="">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 7.png" alt="">
+                    <img class="bottom-flower-image" src="ASSET/FLOWERS/flower 8.png" alt="">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 9.png" alt="">
+                    <img class="bottom-flower-image" src="ASSET/FLOWERS/flower 10.png" alt="">
+                    <img class="bottom-flower-image higher-flower" src="ASSET/FLOWERS/flower 11.png" alt="">
+
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+<h1 class="alana-title">✿  Alana's Gallery  ✿</h1>
+<h2 class="badge-title family-title">Family</h2>
+<h2 class="badge-title twin-title">Twin Sister</h2>
+<h2 class="badge-title friends-title">Friends</h2>
+<h2 class="badge-title sanurian-title">Sanurian Life</h2>
+
+<div class="featured-sliders">
+<section class="featured-slider" aria-label="Slider foto pertama">
+    <input type="radio" id="slider-1-trigger-1" name="slider-1" checked>
+    <label for="slider-1-trigger-1"><span class="sr-only">Slider pertama, slide 1 dari 7.</span></label>
+    <div class="slide bg1-1"></div>
+
+    <input type="radio" id="slider-1-trigger-2" name="slider-1">
+    <label for="slider-1-trigger-2"><span class="sr-only">Slider pertama, slide 2 dari 7.</span></label>
+    <div class="slide bg1-2"></div>
+
+    <input type="radio" id="slider-1-trigger-3" name="slider-1">
+    <label for="slider-1-trigger-3"><span class="sr-only">Slider pertama, slide 3 dari 7.</span></label>
+    <div class="slide bg1-3"></div>
+
+    <input type="radio" id="slider-1-trigger-4" name="slider-1">
+    <label for="slider-1-trigger-4"><span class="sr-only">Slider pertama, slide 4 dari 7.</span></label>
+    <div class="slide bg1-4"></div>
+
+    <input type="radio" id="slider-1-trigger-5" name="slider-1">
+    <label for="slider-1-trigger-5"><span class="sr-only">Slider pertama, slide 5 dari 7.</span></label>
+    <div class="slide bg1-5"></div>
+
+        <input type="radio" id="slider-1-trigger-6" name="slider-1">
+    <label for="slider-1-trigger-6"><span class="sr-only">Slider pertama, slide 6 dari 7.</span></label>
+    <div class="slide bg1-6"></div>
+
+    <input type="radio" id="slider-1-trigger-7" name="slider-1">
+    <label for="slider-1-trigger-7"><span class="sr-only">Slider pertama, slide 7 dari 7.</span></label>
+    <div class="slide bg1-7"></div>
+  </section>
+
+<section class="featured-slider" aria-label="Slider foto pilihan">
+<input type="radio" id="slider-2-trigger-1" name="slider-2" checked>
+<label for="slider-2-trigger-1"><span class="sr-only">Slide 1 of 11.</span></label>
+<div class="slide bg2-1"></div>
+
+<input type="radio" id="slider-2-trigger-2" name="slider-2">
+<label for="slider-2-trigger-2"><span class="sr-only">Slide 2 of 11.</span></label>
+<div class="slide bg2-2"></div>
+
+<input type="radio" id="slider-2-trigger-3" name="slider-2">
+<label for="slider-2-trigger-3"><span class="sr-only">Slide 3 of 11.</span></label>
+<div class="slide bg2-3"></div>
+
+<input type="radio" id="slider-2-trigger-4" name="slider-2">
+<label for="slider-2-trigger-4"><span class="sr-only">Slide 4 of 11.</span></label>
+<div class="slide bg2-4"></div>
+
+<input type="radio" id="slider-2-trigger-5" name="slider-2">
+<label for="slider-2-trigger-5"><span class="sr-only">Slide 5 of 11.</span></label>
+<div class="slide bg2-5"></div>
+
+<input type="radio" id="slider-2-trigger-6" name="slider-2">
+<label for="slider-2-trigger-6"><span class="sr-only">Slide 6 of 11.</span></label>
+<div class="slide bg2-6"></div>
+
+<input type="radio" id="slider-2-trigger-7" name="slider-2">
+<label for="slider-2-trigger-7"><span class="sr-only">Slide 7 of 11.</span></label>
+<div class="slide bg2-7"></div>
+
+<input type="radio" id="slider-2-trigger-8" name="slider-2">
+<label for="slider-2-trigger-8"><span class="sr-only">Slide 8 of 11.</span></label>
+<div class="slide bg2-8"></div>
+
+<input type="radio" id="slider-2-trigger-9" name="slider-2">
+<label for="slider-2-trigger-9"><span class="sr-only">Slide 9 of 11.</span></label>
+<div class="slide bg2-9"></div>
+
+<input type="radio" id="slider-2-trigger-10" name="slider-2">
+<label for="slider-2-trigger-10"><span class="sr-only">Slide 10 of 11.</span></label>
+<div class="slide bg2-10"></div>
+
+<input type="radio" id="slider-2-trigger-11" name="slider-2">
+<label for="slider-2-trigger-11"><span class="sr-only">Slide 11 of 11.</span></label>
+<div class="slide bg2-11"></div>
+</section>
+
+
+<section class="featured-slider" aria-label="Slider foto pilihan">
+<input type="radio" id="slider-3-trigger-1" name="slider-3" checked>
+<label for="slider-3-trigger-1"><span class="sr-only">Slide 1 of 13.</span></label>
+<div class="slide bg3-1"></div>
+
+<input type="radio" id="slider-3-trigger-2" name="slider-3">
+<label for="slider-3-trigger-2"><span class="sr-only">Slide 2 of 13.</span></label>
+<div class="slide bg3-2"></div>
+
+<input type="radio" id="slider-3-trigger-3" name="slider-3">
+<label for="slider-3-trigger-3"><span class="sr-only">Slide 3 of 13.</span></label>
+<div class="slide bg3-3"></div>
+
+<input type="radio" id="slider-3-trigger-4" name="slider-3">
+<label for="slider-3-trigger-4"><span class="sr-only">Slide 4 of 13.</span></label>
+<div class="slide bg3-4"></div>
+
+<input type="radio" id="slider-3-trigger-5" name="slider-3">
+<label for="slider-3-trigger-5"><span class="sr-only">Slide 5 of 13.</span></label>
+<div class="slide bg3-5"></div>
+
+<input type="radio" id="slider-3-trigger-6" name="slider-3">
+<label for="slider-3-trigger-6"><span class="sr-only">Slide 6 of 13.</span></label>
+<div class="slide bg3-6"></div>
+
+<input type="radio" id="slider-3-trigger-7" name="slider-3">
+<label for="slider-3-trigger-7"><span class="sr-only">Slide 7 of 13.</span></label>
+<div class="slide bg3-7"></div>
+
+<input type="radio" id="slider-3-trigger-8" name="slider-3">
+<label for="slider-3-trigger-8"><span class="sr-only">Slide 8 of 13.</span></label>
+<div class="slide bg3-8"></div>
+
+<input type="radio" id="slider-3-trigger-9" name="slider-3">
+<label for="slider-3-trigger-9"><span class="sr-only">Slide 9 of 13.</span></label>
+<div class="slide bg3-9"></div>
+
+<input type="radio" id="slider-3-trigger-10" name="slider-3">
+<label for="slider-3-trigger-10"><span class="sr-only">Slide 10 of 13.</span></label>
+<div class="slide bg3-10"></div>
+
+<input type="radio" id="slider-3-trigger-11" name="slider-3">
+<label for="slider-3-trigger-11"><span class="sr-only">Slide 11 of 13.</span></label>
+<div class="slide bg3-11"></div>
+
+<input type="radio" id="slider-3-trigger-12" name="slider-3">
+<label for="slider-3-trigger-12"><span class="sr-only">Slide 12 of 13.</span></label>
+<div class="slide bg3-12"></div>
+
+<input type="radio" id="slider-3-trigger-13" name="slider-3">
+<label for="slider-3-trigger-13"><span class="sr-only">Slide 13 of 13.</span></label>
+<div class="slide bg3-13"></div>
+</section>
+
+
+<section class="featured-slider" aria-label="Slider foto pilihan">
+<input type="radio" id="slider-4-trigger-1" name="slider-4" checked>
+<label for="slider-4-trigger-1"><span class="sr-only">Slide 1 of 11.</span></label>
+<div class="slide bg4-1"></div>
+
+<input type="radio" id="slider-4-trigger-2" name="slider-4">
+<label for="slider-4-trigger-2"><span class="sr-only">Slide 2 of 11.</span></label>
+<div class="slide bg4-2"></div>
+
+<input type="radio" id="slider-4-trigger-3" name="slider-4">
+<label for="slider-4-trigger-3"><span class="sr-only">Slide 3 of 11.</span></label>
+<div class="slide bg4-3"></div>
+
+<input type="radio" id="slider-4-trigger-4" name="slider-4">
+<label for="slider-4-trigger-4"><span class="sr-only">Slide 4 of 11.</span></label>
+<div class="slide bg4-4"></div>
+
+<input type="radio" id="slider-4-trigger-5" name="slider-4">
+<label for="slider-4-trigger-5"><span class="sr-only">Slide 5 of 11.</span></label>
+<div class="slide bg4-5"></div>
+
+<input type="radio" id="slider-4-trigger-6" name="slider-4">
+<label for="slider-4-trigger-6"><span class="sr-only">Slide 6 of 11.</span></label>
+<div class="slide bg4-6"></div>
+
+<input type="radio" id="slider-4-trigger-7" name="slider-4">
+<label for="slider-4-trigger-7"><span class="sr-only">Slide 7 of 11.</span></label>
+<div class="slide bg4-7"></div>
+
+<input type="radio" id="slider-4-trigger-8" name="slider-4">
+<label for="slider-4-trigger-8"><span class="sr-only">Slide 8 of 11.</span></label>
+<div class="slide bg4-8"></div>
+
+<input type="radio" id="slider-4-trigger-9" name="slider-4">
+<label for="slider-4-trigger-9"><span class="sr-only">Slide 9 of 11.</span></label>
+<div class="slide bg4-9"></div>
+
+<input type="radio" id="slider-4-trigger-10" name="slider-4">
+<label for="slider-4-trigger-10"><span class="sr-only">Slide 10 of 11.</span></label>
+<div class="slide bg4-10"></div>
+
+<input type="radio" id="slider-4-trigger-11" name="slider-4">
+<label for="slider-4-trigger-11"><span class="sr-only">Slide 11 of 11.</span></label>
+<div class="slide bg4-11"></div>
+</section>
+</div>
+
+<div class="scrapbook-container">
+    <div class="emoji-wrapper">
+        <span class="emoji baby">👶</span>
+        <span class="emoji teen">👧🏻</span>
+    </div>
+    <span class="chapters-text">My Chapters Through the Years</span>
+    <span class="clock-icon">⏳</span>
+</div>
+
+<div class="outer-container">
+  <div class="track-wrapper">
+    <ul class="track">
+      <li class="year-item year-item--start">
+        <span class="vertical-text">2011</span>
+      </li>
+
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/1.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/2.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/3.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/4.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/5.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/6.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/7.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/8.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/9.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/10.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/11.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/12.jpg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/13.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/14.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/15.png" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/16.png" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/17.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/18.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/19.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/20.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/21.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/22.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/23.jpeg" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/24.png" alt="" width="300" height="300" />
+      </li>
+      <li class="track__item">
+        <div class="sparkles"><span class="star s1">✦</span><span class="star s2">★</span><span class="star s3">✦</span><span class="star s4">★</span></div>
+        <img src="ASSET/CAROUSEL/25.png" alt="" width="300" height="300" />
+      </li>
+
+      <li class="year-item year-item--end">
+        <span class="vertical-text">2026</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="food-gallery">
+    <div class="favorite-food-title">
+      <img src="ASSET/MAKANAN/TITLE MAKANAN FAVORIT.png" alt="Judul Makanan Favorit" class="food-title-img">
+    </div>
+
+      <div class="item-box">
+      <img src="ASSET/MAKANAN/Sushi.png" alt="Makanan 1" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING BIRU.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box">
+      <img src="ASSET/MAKANAN/Dubai Chewy Cookie.png" alt="Makanan 2" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING MERAH.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box">
+      <img src="ASSET/MAKANAN/Strawberry Ice Cream.png" alt="Makanan 3" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING BIRU.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box">
+      <img src="ASSET/MAKANAN/Cheesecake.png" alt="Makanan 4" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING MERAH.png" alt="Piring" class="plate-img">
+      </div>
+</div>
+
+  <div class="food-gallery-secondline">
+      <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Babi Panggang Merah.png" alt="Makanan 5" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING BIRU.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Yogurt.png" alt="Makanan 6" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING MERAH.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Bingsu.png" alt="Makanan 7" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING BIRU.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Fried Mozzarella.png" alt="Makanan 8" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING MERAH.png" alt="Piring" class="plate-img">
+      </div>
+
+    <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Rendang.png" alt="Makanan 9" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING BIRU.png" alt="Piring" class="plate-img">
+    </div>
+
+    <div class="item-box-secondline">
+      <img src="ASSET/MAKANAN/Burger.png" alt="Makanan 10" class="food-img">
+      <img src="ASSET/MAKANAN/PIRING MERAH.png" alt="Piring" class="plate-img">
+      </div>
+
+</div>
+
+<div class="drink-gallery">
+  <div class="item-box-drinks">
+    <img src="ASSET/MINUMAN/Strawberry Acai Lemonade.png" alt="Minuman 1" class="drink-img">
+    <img src="ASSET/MINUMAN/Glass.png" alt="Gelas" class="glass-img">
+  </div>
+
+  <div class="item-box-drinks">
+    <img src="ASSET/MINUMAN/Berry Juice.png" alt="Minuman 2" class="drink-img">
+    <img src="ASSET/MINUMAN/Glass.png" alt="Gelas" class="glass-img">
+  </div>
+
+  <div class="item-box-drinks">
+    <img src="ASSET/MINUMAN/Es Campur.png" alt="Minuman 3" class="drink-img">
+    <img src="ASSET/MINUMAN/Glass.png" alt="Gelas" class="glass-img">
+  </div>
+
+  <div class="item-box-drinks">
+    <img src="ASSET/MINUMAN/Milk Tea.png" alt="Minuman 4" class="drink-img">
+    <img src="ASSET/MINUMAN/Glass.png" alt="Gelas" class="glass-img">
+  </div>
+
+  <div class="favorite-drink-title">
+    <img src="ASSET/MINUMAN/TITLE MINUMAN FAVORIT.png" alt="Judul Minuman Favorit" class="drink-title-img">
+  </div>
+</div>
+
+<div class="page-break-wrapper">
+    <img src="ASSET/HOME/Beach Page Divider.png" alt="Pembatas Halaman" class="animated-divider">
+  </div>
+
+<div class="film-title-wrapper">
+    <span class="film-emoji"> 🎬</span>
+    <h2 class="film-favorite-title">Film Favorit</h2>
+    <span class="film-emoji"> 🎬</span>
+</div>
+
+<div class="cards-gallery-container">
+        <div class="flip-card card-1">
+        <div class="sparkles">
+            <span class="star s1">✦</span>
+            <span class="star s2">✨</span>
+        </div>
+        <div class="flip-card-inner">
+            <div class="flip-card-face photo-front">
+                <img src="ASSET/FILM FAVORIT/The Trauma Code.png" alt="The Trauma Code">
+            </div>
+            <div class="flip-card-face photo-back">
+                <h3>The Trauma Code</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card card-2">
+        <div class="sparkles">
+            <span class="star s1">✨</span>
+            <span class="star s2">✦</span>
+        </div>
+        <div class="flip-card-inner">
+            <div class="flip-card-face photo-front">
+                <img src="ASSET/FILM FAVORIT/Twinkling Watermelon.png" alt="Twinkling Watermelon">
+            </div>
+            <div class="flip-card-face photo-back">
+                <h3>Twinkling Watermelon</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card card-3">
+        <div class="sparkles">
+            <span class="star s1">✦</span>
+            <span class="star s2">✨</span>
+        </div>
+        <div class="flip-card-inner">
+            <div class="flip-card-face photo-front">
+                <img src="ASSET/FILM FAVORIT/Spiderman.png" alt="Spiderman Brand New Day">
+            </div>
+            <div class="flip-card-face photo-back">
+                <h3>Spiderman Brand New Day</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card card-4">
+        <div class="sparkles">
+            <span class="star s1">✨</span>
+            <span class="star s2">✦</span>
+        </div>
+        <div class="flip-card-inner">
+            <div class="flip-card-face photo-front">
+                <img src="ASSET/FILM FAVORIT/Teach You A Lesson.png" alt="Teach You A Lesson">
+            </div>
+            <div class="flip-card-face photo-back">
+                <h3>Teach You A Lesson</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card card-5">
+        <div class="sparkles">
+            <span class="star s1">✦</span>
+            <span class="star s2">✨</span>
+        </div>
+        <div class="flip-card-inner">
+            <div class="flip-card-face photo-front">
+                <img src="ASSET/FILM FAVORIT/Harry Potter 2.png" alt="Harry Potter 2">
+            </div>
+            <div class="flip-card-face photo-back">
+                <h3>Harry Potter 2</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="music-section-container">
+    <div class="left-column">
+        <div class="spotify-box">
+            <iframe 
+                src="https://open.spotify.com/embed/playlist/1oP0am86VVey4D1MLvPc7L?utm_source=generator&theme=0" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="tincase-box">
+            <img src="ASSET/TINCASE.png" alt="What's in my Tincase" class="tincase-img">
+        </div>
+    </div>
+
+    <div class="right-column">
+        <h3 class="artists-section-title">Penyanyi Favorit</h3>
+
+        <div class="artist-row row-2">
+            <div class="artist-card">
+                <img src="ASSET/FAV SINGERS/Olivia Dean.png" alt="Olivia Dean" class="artist-img">
+            </div>
+            <div class="artist-card">
+                <img src="ASSET/FAV SINGERS/Tori Kelly.png" alt="Tori Kelly" class="artist-img">
+            </div>
+        </div>
+
+        <div class="artist-row row-2">
+            <div class="artist-card">
+                <img src="ASSET/FAV SINGERS/Kehlani.png" alt="Kehlani" class="artist-img">
+            </div>
+            <div class="artist-card">
+                <img src="ASSET/FAV SINGERS/Olivia Rodrigo.png" alt="Olivia Rodrigo" class="artist-img">
+            </div>
+        </div>
+
+        <div class="artist-row row-1">
+            <div class="artist-card group-cortis">
+                <img src="ASSET/FAV SINGERS/Cortis.png" alt="Cortis" class="artist-img">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+        <center>
+            <div class="footer">
+                <p>✨ 🌟 Clarissa Alana Rajasa Ginting IX-1/10 - Tugas TIK - 26 Oktober 2026🌟 ✨</p>
+            </div>
+        </center>
+    </div>
+
+
+    </body>
+</html>
